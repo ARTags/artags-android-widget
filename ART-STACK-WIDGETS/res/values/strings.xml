@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* Copyright (c) 2010-2011 ARTags Project owners (see http://www.artags.org)
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+-->
+
+
+<resources>
+    <string name="app_name">ARTags Widgets</string>
+    <string name="app_description">ARTags Widgets</string>
+    <string name="widget_name">ARTags stack widgets</string>
+    <string name="widget_latest_tags_name">ARTags latest tags</string>
+    <string name="widget_best_tags_name">ARTags best tags</string>
+    <string name="empty_view_text">ARTags stack widget loading...</string>
+</resources>

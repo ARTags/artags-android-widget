@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* Copyright (c) 2010-2011 ARTags Project owners (see http://www.artags.org)
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="org.artags.android.app.stackwidget"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <uses-sdk android:targetSdkVersion="14" android:minSdkVersion="11"/>
+
+    <application android:label="@string/widget_name" android:icon="@drawable/icon">
+        
+        <receiver android:name=".ui.widget.LatestTagsWidget" android:label="@string/widget_latest_tags_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                       android:resource="@xml/stackwidgetinfo" />
+        </receiver>
+
+        <receiver android:name=".ui.widget.BestTagsWidget" android:label="@string/widget_best_tags_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                       android:resource="@xml/stackwidgetinfo" />
+        </receiver>
+
+        <service android:name=".service.StackWidgetService"
+                 android:permission="android.permission.BIND_REMOTEVIEWS"
+                 android:exported="false" />
+    </application>
+
+</manifest>
